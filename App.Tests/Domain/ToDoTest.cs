@@ -11,4 +11,13 @@ public class ToDoTest
         var exception = Assert.Throws<ArgumentException>(creation);
         Assert.Equal(ToDo.TitleMustBeNonEmptyErrorMessage, exception.Message);
     }
+
+    [Fact]
+    public void ItMustHaveNonEmptyDescription(){}
+
+    [Fact]
+    public void ItMustHaveAFutureDate(){}
+
+    [Fact]
+    public void ItMustEmitToDoCreatedEvent(){}
 }
