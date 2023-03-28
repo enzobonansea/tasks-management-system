@@ -11,3 +11,5 @@ The first feature that I will develop is the creation of a ToDo, a simple entity
 - Reactions to ToDoDateArrived event will be defined later.
 
 All events will be created in a transaction within its corresponding Aggregate and stored in an outbox table. A supporting bounded context that will be defined is Message Relay Bounded Context, which responsibility will be dispatch the domain events stored in the outbox table.
+
+For simplicity, all the bounded context will be, at first, in the same C# project. They will be virtually separated so splitting the project into many others in such a way that every project has only one bounded context will be straightforward; that's the ideal scenario since this allows independent deployments and independent autoscaling management.
