@@ -4,6 +4,6 @@ public abstract class AggregateRoot
 
     public AggregateRoot()
     {
-
+        this.DomainEvents = new List<string>() { $"{this.GetType().Name}Created" };
     }
 }
