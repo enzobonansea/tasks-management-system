@@ -28,7 +28,4 @@ public class ToDoTest
         var exception = Assert.Throws<ArgumentException>(creation);
         Assert.Equal(ToDo.DateMustBeFutureErrorMessage, exception.Message);
     }
-
-    [Fact]
-    public void ItMustEmitToDoCreatedEvent() { }
 }

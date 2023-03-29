@@ -1,6 +1,6 @@
 namespace app.Domain;
 
-public class ToDo
+public class ToDo : AggregateRoot
 {
     public const string TitleMustBeNonEmptyErrorMessage = "Title most be non empty";
     public const string DescriptionMustBeNonEmptyErrorMessage = "Description must be non empty";
@@ -10,7 +10,7 @@ public class ToDo
     private readonly string description;
     private readonly DateTime date;
 
-    public ToDo(string title, string description, DateTime date)
+    public ToDo(string title, string description, DateTime date) : base()
     {
         if (string.IsNullOrWhiteSpace(title)) throw new ArgumentException(ToDo.TitleMustBeNonEmptyErrorMessage);
         if (string.IsNullOrWhiteSpace(description)) throw new ArgumentException(ToDo.DescriptionMustBeNonEmptyErrorMessage);
