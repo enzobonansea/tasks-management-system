@@ -20,4 +20,8 @@ public class ToDo : AggregateRoot
         this.description = description;
         this.date = date;
     }
+
+    public string Title { get => this.title; }
+    public string Description { get => this.description; }
+    public DateTime Date { get => this.date; }
 }
