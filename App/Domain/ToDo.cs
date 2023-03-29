@@ -8,10 +8,10 @@ public class ToDo
     private readonly string title;
     private readonly string description;
 
-    public ToDo(string title, string description)
+    public ToDo(string title, string description, DateTime date)
     {
         if (string.IsNullOrWhiteSpace(title)) throw new ArgumentException(ToDo.TitleMustBeNonEmptyErrorMessage);
-        if (string.IsNullOrWhiteSpace(description)) throw new ArgumentException(ToDo.TitleMustBeNonEmptyErrorMessage);
+        if (string.IsNullOrWhiteSpace(description)) throw new ArgumentException(ToDo.DescriptionMustBeNonEmptyErrorMessage);
 
         this.title = title;
         this.description = description;
