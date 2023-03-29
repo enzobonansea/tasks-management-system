@@ -1,3 +1,5 @@
+using app.Domain;
+
 public class AggregateRootTest
 {
     [Fact]
