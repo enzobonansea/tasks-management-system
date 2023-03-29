@@ -7,7 +7,10 @@ public class AggregateRootTest
     {
         var aggregate = new SomeAggregate();
         Assert.Equal(aggregate.DomainEvents.Count(), 1);
-        Assert.Equal(aggregate.DomainEvents.ElementAt(0), $"{nameof(SomeAggregate)}Created");
+        var domainEvent = aggregate.DomainEvents.ElementAt(0);
+        Assert.Equal(domainEvent.Name, $"{nameof(SomeAggregate)}Created");
+        Assert.Equal(domainEvent.Data, null);
+
     }
 }
 
